@@ -1,221 +1,215 @@
+
+
 <!DOCTYPE html>
 <html lang="pl-PL" />
-<head>
-<meta charset="utf-8" />
-<style>
-
-@keyframes logo_anim {
-0% {-webkit-filter: drop-shadow(0px 0px 1px red); filter: drop-shadow(0px 0px 1px red); transform: scale(0.9);}
-50% {-webkit-filter: drop-shadow(0px 0px 10px red); filter: drop-shadow(0px 0px 10px red); transform: scale(0.6);}
-80% {-webkit-filter: drop-shadow(0px 0px 20px red); filter: drop-shadow(0px 0px 20px red); transform: scale(0.7);}
-100% {-webkit-filter: drop-shadow(0px 0px 45px red); filter: drop-shadow(0px 0px 45px red); transform: scale(0.9);}
-}
-.logo {animation: logo_anim 5s infinite;}
-
-
-* {padding: 0; margin: 0; box-sizing: border-box; min-height: 100%; text-decoration: none;}
-body {background: #e7e7e7; font-family: Verdana;}
-h1 {font-size: 24px;}
-h4 {font-weight: 100;}
-.container {width: 1150px; margin: 0 auto; height: 100%;}
-a {color: white;}
-.header {position: relative; overflow: hidden; margin: 0 auto; background: black url("header_bg2.jpg"); background-repeat: repeat-x; width: 1150px;}
-#map {transition: all .2s ease-in-out;}
-#map:hover {transform: scale(1.2);}
-.social:hover {opacity: 0.8;}
-.menu {position: relative; overflow: hidden; background-color: rgba(0,0,0,0.5); width: 1150px; margin: 0 auto; height: 50px; margin-top: 48px;}
-.menu ul {list-style: none; width: 1150px; margin: 0 auto; text-align: center; padding-right: 20px;}
-.menu ul li {display: inline-block; transition: 0.5s;}
-.menu ul li:hover {opacity: 0.3;}
-.menu ul li a {width: 100%; height: 100%;}
-.left__panel {width: 260px; float: left !important; clear: both !important; height: 100%; background: white; z-index: 2; position: relative;}
-.left__panel-menu {background: black; min-height: 100%;}
-.left__panel-menu ul {list-style: none; margin-top: -4px; padding: 0px;}
-.left__panel-menu ul li {display: block; padding: 12px; background-color: white; border-top: 1px solid #e8e8e8;}
-.left__panel-menu ul li:hover {opacity: 0.9;}
-.left__panel-menu ul li a {color: black; font-weight: bold; display: block;}
-
-/* brand logos */
-
-.left__panel-menu ul li:nth-child(1) a:before {content: ""; position: relative; display: inline-block; background-image: url("ford2.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-.left__panel-menu ul li:nth-child(2) a:before {content: ""; position: relative; display: inline-block; background-image: url("isuzu2.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-.left__panel-menu ul li:nth-child(3) a:before {content: ""; position: relative; display: inline-block; background-image: url("vw2.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-.left__panel-menu ul li:nth-child(4) a:before {content: ""; position: relative; display: inline-block; background-image: url("mitsubishi2.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-.left__panel-menu ul li:nth-child(5) a:before {content: ""; position: relative; display: inline-block; background-image: url("nissan2.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-.left__panel-menu ul li:nth-child(6) a:before {content: ""; position: relative; display: inline-block; background-image: url("toyota2.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-
-/* right panel */
-
-.right__panel {width: 260px; float: right; padding: 0;}
-.right__panel-menu {background: black;}
-.right__panel-menu ul {list-style: none; margin-top: -4px; padding: 0px;}
-.right__panel-menu ul li {display: block; padding: 12px; background-color: white; border-top: 1px solid #e8e8e8;}
-.right__panel-menu ul li:hover {opacity: 0.9;}
-.right__panel-menu ul li a {color: black; font-weight: bold; display: block;}
-
-.right__panel-menu ul li:nth-child(1) a:before {content: ""; position: relative; display: inline-block; background-image: url("zabudowa.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-.right__panel-menu ul li:nth-child(2) a:before {content: ""; position: relative; display: inline-block; background-image: url("kuweta.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-.right__panel-menu ul li:nth-child(3) a:before {content: ""; position: relative; display: inline-block; background-image: url("progi.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-.right__panel-menu ul li:nth-child(4) a:before {content: ""; position: relative; display: inline-block; background-image: url("orurowanie.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-.right__panel-menu ul li:nth-child(5) a:before {content: ""; position: relative; display: inline-block; background-image: url("oslona.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-.right__panel-menu ul li:nth-child(6) a:before {content: ""; position: relative; display: inline-block; background-image: url("oswietlenie.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-.right__panel-menu ul li:nth-child(7) a:before {content: ""; position: relative; display: inline-block; background-image: url("felgi.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-.right__panel-menu ul li:nth-child(8) a:before {content: ""; position: relative; display: inline-block; background-image: url("opony.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-.right__panel-menu ul li:nth-child(9) a:before {content: ""; position: relative; display: inline-block; background-image: url("zderzak.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-.right__panel-menu ul li:nth-child(10) a:before {content: ""; position: relative; display: inline-block; background-image: url("box.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
-
-/* */
-.right__panel-menu ul li:nth-child(5) {position: relative; padding-left: 40px;}
-
-
-/* content panel */
-
-.title {background: white; text-align: center; border-bottom: 5px solid #dddddd; width: 600px; min-height: 100% !important; padding: 20px;  margin: 30px auto;}
-.title:hover {border-bottom: 5px solid #B71D1D;}
-.content {background: white; text-align: justify; border-bottom: 5px solid #dddddd; width: 600px; min-height: 100% !important; padding: 20px; display: block; margin: 30px auto;}
-.content:hover {border-bottom: 5px solid #000000;}
-.images {background: white; border-bottom: 5px solid #dddddd; width: 600px; min-height: 100% !important; padding: 5px; display: block; margin: 30px auto;}
-.images:hover {border-bottom: 5px solid #000000;}
-.images img {width: 49.5%; display: inline-block; transition: 0.2s; position: relative;}
-.images img:hover {transform: scale(1.4); z-index: 100;}
-/* footer panel */
-
-.footer {clear: both; display: block; width: 100%; background: white; padding: 20px; position: relative; z-index: 0;}
-.footer__map {display: block; width: 100%; margin-top: 20px;}
-
-/* fixed content */
-.slide {position: fixed; z-index: 0; top: 40px;}
-</style>
-</head>
-
-<body>
-<div class="container">
-<div class="slide">
-<a href="#down"><img src="zobacz.jpg" /></a>
-</div>
-<div class="header">
-
-<!-- #logo# -->
-<img src="zdj.png" class="logo" style="margin-left: 0px; position: relative; top: 5px; margin-bottom: 130px; -webkit-filter: drop-shadow(0px 0px 10px red); filter: drop-shadow(0px 0px 10px red);" />
-<!-- #logo# -->
-
-<!-- #kontakt# -->
-<a href="https://goo.gl/maps/EVXTvuZ5GQM2" target="_blank"><img src="map.png" id="map" style="display: none; position: relative; float: right; top: 45px; right: 200px; width: 280px;" /></a>
-<!-- #kontakt# -->
-
-<!-- #social# -->
-<a href="https://www.facebook.com/Hardtopcompl-1131304456936510/" target="_blank"><img src="fb.png" class="social" style="position: relative; float: right; right: -7px; width: 130px;" /></a>
-<a href="https://www.instagram.com/hardtop.com.pl/" target="_blank"><img src="instagram.png" class="social" style="position: relative; float: right; right: -137px; top: 60px; width: 130px;" /></a>
-<!-- #social# -->
-
-<!-- #menu# -->
-<div class="menu">
-<ul>
-<li><a href="dd"><img src="onas.jpg" style="margin-right: -50px !important;"></a></li>
-<li><a href="ss"><img src="aukcje.jpg" style="margin-right: -6px !important;"></a></li>
-<li><a href="ff"><img src="komentarze.jpg" style="margin-right: -6px !important;"></a></li>
-<li><a href="aa"><img src="kontakt.jpg"></a></li>
-</ul>
-</div>
-<!-- #menu# -->
-</div>
-<!-- #left panel# -->
-<div class="left__panel">
-<img src="oferta.jpg" />
-<div class="left__panel-menu">
-<ul>
-<li><a href="asasas">Ford</a></li>
-<li><a href="asasas">Isuzu</a></li>
-<li><a href="asasas">Volkswagen</a></li>
-<li><a href="asasas">Mitsubishi</a></li>
-<li><a href="asasas">Nissan</a></li>
-<li><a href="asasas">Toyota</a></li>
-</ul>
-</div>
-</div>
-<!-- #right panel# -->
-<div class="right__panel">
-<img src="kategorie.jpg" />
-<div class="right__panel-menu">
-<ul>
-<li><a href="asasas">Zabudowy</a></li>
-<li><a href="asasas">Kuwety</a></li>
-<li><a href="asasas">Progi</a></li>
-<li><a href="asasas">Orurowania</a></li>
-<li><a href="asasas">Osłony podwozia</a></li>
-<li><a href="asasas">Oświetlenie</a></li>
-<li><a href="asasas">Felgi</a></li>
-<li><a href="asasas">Opony</a></li>
-<li><a href="asasas">Zderzaki</a></li>
-<li><a href="asasas">Box</a></li>
-</ul>
-</div>
-</div>
-<!-- #content# -->
-<div class="title"><b><h4 style="text-align: center;">Przedmiotem aukcji jest:</h2></b><br />
-<h1>Kierownica CLASSIC x5 20, asasasas, laslaslas, dfdsfdsdsfds, sadasdasddsad, sdf</h1>
-</div>
-<div class="content">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae sagittis neque, nec pharetra tellus. Nunc sodales elit leo, eu iaculis metus aliquam sed. Sed vestibulum lorem a nunc sollicitudin venenatis non quis lorem. Mauris vitae turpis id dui vehicula rhoncus dignissim et justo. Phasellus sagittis, ipsum ut posuere sodales, velit diam pulvinar enim, ac tempor tellus ipsum at lectus. Donec fermentum efficitur augue, vel interdum felis finibus eu. Fusce dictum lorem a dui lobortis fermentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras eget pharetra velit. Praesent finibus dui at dui tristique, eu sodales nulla suscipit. Mauris eleifend pretium molestie.
-
-vitae placerat vel, gravida vel mi. Maecenas a lacus libero. Praesent venenatis, quam lacinia pharetra tristique, turpis purus lacinia lorem, ac gravida nunc magna a augue. Sed at mollis lectus, eget finibus ante. Donec varius, lacus a dictum porta, nibh mauris faucibus ipsum, et accumsan nisi arcu eu augue. Proin quis sem eu ligula imperdiet luctus. Etiam viverra vehicula molestie. Proin et gravida mauris, in fermentum purus. Aliquam a nulla congue, maximus tortor placerat, fringilla leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lorem nulla, malesuada ut malesuada a, fermentum sed diam. 
- 
-</div>
-<!-- #tutaj wrzucamy zdjecia# -->
-<div class="images">
-<b><h4 style="text-align: center; padding: 20px;">Zdjęcia (kliknij, aby powiększyć):</h2></b><br />
-<img src="zdj1.jpg" />
-<img src="zdj1.jpg" />
-<img src="zdj2.jpg" />
-<img src="zdj1.jpg" />
- 
-</div>
-
-<div class="footer">
-<!-- Aukcjoner.pl PANEL START -->
-<br clear="all"><center><table id="aukcjoner263398" cellspacing="0" style="font:10px Verdana; margin:10px auto; border-collapse:separate; border-spacing:0"><tr><td colspan="4" class="au_header au_tab_top" style="background:transparent; color:#000000"><div style="position:relative; height:24px; text-align:left"><span style="line-height:24px; font-size:14px; font-weight: bold; margin-left:5px; padding:0 10px 0; background:transparent; color:#000000"></span></div></td></tr><tr><td class="au_img au_left au_top"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,1/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/1-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/1.jpg"></a></td><td class="au_img au_top"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,2/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/2-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/2.jpg"></a></td><td class="au_img au_top"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,3/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/3-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/3.jpg"></a></td><td class="au_img au_right au_top"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,4/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/4-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/4.jpg"></a></td></tr><tr><td class="au_img au_left au_bottom"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,5/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/5-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/5.jpg"></a></td><td class="au_img au_bottom"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,6/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/6-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/6.jpg"></a></td><td class="au_img au_bottom"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,7/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/7-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/7.jpg"></a></td><td class="au_img au_right au_bottom"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,8/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/8-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/8.jpg"></a></td></tr><tr><td colspan="4" class="au_tab_bottom au_footer" style="background:transparent; color:#000000"></td></tr></table></center><style>#aukcjoner263398 td.au_top {border-top:1px solid transparent}
-#aukcjoner263398 td.au_left {border-left:1px solid transparent}
-#aukcjoner263398 td.au_right {border-right:1px solid transparent}
-#aukcjoner263398 td.au_bottom {border-bottom:1px solid transparent}
-#aukcjoner263398 .au_tab_top {border:1px solid #888888; border-width: 1px 1px 0 1px}
-#aukcjoner263398 .au_header {padding:0 10px; vertical-align:bottom; border-color:transparent}
-#aukcjoner263398 .au_link {background:#ffffff; color:#000000; padding:1px 10px 1px; margin:0 10px 0 0; display:block; float:right; text-align:center; text-decoration:none}
-#aukcjoner263398 .au_link:hover {text-decoration:underline}
-#aukcjoner263398 .au_tab_bottom {padding:0 10px 2px; margin:0 5px; vertical-align:top; border:1px solid #888888; border-width: 0 1px 1px 1px}
-#aukcjoner263398 .au_footer {padding:0 10px; height:24px; border-color:transparent}
-#aukcjoner263398 .au_img {font-size:0; vertical-align:top; border-width:0; background:transparent; padding:6px; border-right:1px solid transparent; border-bottom:1px solid transparent}
-#aukcjoner263398 td.au_top {border-top:1px solid transparent}
-#aukcjoner263398 td.au_left {border-left:1px solid transparent}
-#aukcjoner263398 img.au_auc {width:167px; height:214px; background:white url(http://www.aukcjoner.pl/Panel/gfx/loader.gif) no-repeat 50% 50%; border-width:0px}
-#aukcjoner263398 .au_img a {position:relative; display:block; width:167px; height:214px}
-#aukcjoner263398 a img.au_cur {border:none; position:absolute; visibility:hidden; background:none}
-#aukcjoner263398 a:hover img.au_cur {visibility:visible}
-</style>
-<!-- Aukcjoner.pl PANEL KONIEC -->
-
-
-
-
-</div>
-<div class="footer__map" id="down">
-<img src="mapa.png" />
-</div>
-</div>
-</body>
-
+   <head>
+      <meta charset="utf-8" />
+      <style>
+         @keyframes logo_anim {
+         0% {-webkit-filter: drop-shadow(0px 0px 1px red); filter: drop-shadow(0px 0px 1px red); transform: scale(0.9);}
+         50% {-webkit-filter: drop-shadow(0px 0px 10px red); filter: drop-shadow(0px 0px 10px red); transform: scale(0.6);}
+         80% {-webkit-filter: drop-shadow(0px 0px 20px red); filter: drop-shadow(0px 0px 20px red); transform: scale(0.7);}
+         100% {-webkit-filter: drop-shadow(0px 0px 45px red); filter: drop-shadow(0px 0px 45px red); transform: scale(0.9);}
+         }
+         .logo {animation: logo_anim 5s infinite;}
+         * {padding: 0; margin: 0; box-sizing: border-box; min-height: 100%; text-decoration: none;}
+         body {background: #e7e7e7; font-family: Verdana;}
+         h1 {font-size: 24px;}
+         h4 {font-weight: 100;}
+         .container {width: 1150px; margin: 0 auto; height: 100%;}
+         a {color: white;}
+         .header {position: relative; overflow: hidden; margin: 0 auto; background: black url("header_bg2.jpg"); background-repeat: repeat-x; width: 1150px;}
+         #map {transition: all .2s ease-in-out;}
+         #map:hover {transform: scale(1.2);}
+         .social:hover {opacity: 0.8;}
+         .menu {position: relative; overflow: hidden; background-color: rgba(0,0,0,0.5); width: 1150px; margin: 0 auto; height: 50px; margin-top: 48px;}
+         .menu ul {list-style: none; width: 1150px; margin: 0 auto; text-align: center; padding-right: 20px;}
+         .menu ul li {display: inline-block; transition: 0.5s;}
+         .menu ul li:hover {opacity: 0.3;}
+         .menu ul li a {width: 100%; height: 100%;}
+         .left__panel {width: 260px; float: left !important; clear: both !important; height: 100%; background: white; z-index: 2; position: relative;}
+         .left__panel-menu {background: black; min-height: 100%;}
+         .left__panel-menu ul {list-style: none; margin-top: -4px; padding: 0px;}
+         .left__panel-menu ul li {display: block; padding: 12px; background-color: white; border-top: 1px solid #e8e8e8;}
+         .left__panel-menu ul li:hover {opacity: 0.9;}
+         .left__panel-menu ul li a {color: black; font-weight: bold; display: block;}
+         /* brand logos */
+         .left__panel-menu ul li:nth-child(1) a:before {content: ""; position: relative; display: inline-block; background-image: url("ford2.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         .left__panel-menu ul li:nth-child(2) a:before {content: ""; position: relative; display: inline-block; background-image: url("isuzu2.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         .left__panel-menu ul li:nth-child(3) a:before {content: ""; position: relative; display: inline-block; background-image: url("vw2.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         .left__panel-menu ul li:nth-child(4) a:before {content: ""; position: relative; display: inline-block; background-image: url("mitsubishi2.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         .left__panel-menu ul li:nth-child(5) a:before {content: ""; position: relative; display: inline-block; background-image: url("nissan2.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         .left__panel-menu ul li:nth-child(6) a:before {content: ""; position: relative; display: inline-block; background-image: url("toyota2.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         /* right panel */
+         .right__panel {width: 260px; float: right; padding: 0;}
+         .right__panel-menu {background: black;}
+         .right__panel-menu ul {list-style: none; margin-top: -4px; padding: 0px;}
+         .right__panel-menu ul li {display: block; padding: 12px; background-color: white; border-top: 1px solid #e8e8e8;}
+         .right__panel-menu ul li:hover {opacity: 0.9;}
+         .right__panel-menu ul li a {color: black; font-weight: bold; display: block;}
+         .right__panel-menu ul li:nth-child(1) a:before {content: ""; position: relative; display: inline-block; background-image: url("zabudowa.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         .right__panel-menu ul li:nth-child(2) a:before {content: ""; position: relative; display: inline-block; background-image: url("kuweta.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         .right__panel-menu ul li:nth-child(3) a:before {content: ""; position: relative; display: inline-block; background-image: url("progi.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         .right__panel-menu ul li:nth-child(4) a:before {content: ""; position: relative; display: inline-block; background-image: url("orurowanie.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         .right__panel-menu ul li:nth-child(5) a:before {content: ""; position: relative; display: inline-block; background-image: url("oslona.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         .right__panel-menu ul li:nth-child(6) a:before {content: ""; position: relative; display: inline-block; background-image: url("oswietlenie.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         .right__panel-menu ul li:nth-child(7) a:before {content: ""; position: relative; display: inline-block; background-image: url("felgi.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         .right__panel-menu ul li:nth-child(8) a:before {content: ""; position: relative; display: inline-block; background-image: url("opony.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         .right__panel-menu ul li:nth-child(9) a:before {content: ""; position: relative; display: inline-block; background-image: url("zderzak.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         .right__panel-menu ul li:nth-child(10) a:before {content: ""; position: relative; display: inline-block; background-image: url("box.png"); height: 72px; width: 70px; vertical-align: middle; padding-left: 50px; background-repeat: no-repeat; background-size: 100px 70px;}
+         /* */
+         .right__panel-menu ul li:nth-child(5) {position: relative; padding-left: 40px;}
+         /* content panel */
+         .title {background: white; text-align: center; border-bottom: 5px solid #dddddd; width: 600px; min-height: 100% !important; padding: 20px;  margin: 30px auto;}
+         .title:hover {border-bottom: 5px solid #B71D1D;}
+         .content {background: white; text-align: justify; border-bottom: 5px solid #dddddd; width: 600px; min-height: 100% !important; padding: 20px; display: block; margin: 30px auto;}
+         .content:hover {border-bottom: 5px solid #000000;}
+         .images {background: white; border-bottom: 5px solid #dddddd; width: 600px; min-height: 100% !important; padding: 5px; display: block; margin: 30px auto;}
+         .images:hover {border-bottom: 5px solid #000000;}
+         .images img {width: 49.5%; display: inline-block; transition: 0.2s; position: relative;}
+         .images img:hover {transform: scale(1.4); z-index: 100;}
+         /* footer panel */
+         .footer {clear: both; display: block; width: 100%; background: white; padding: 20px; position: relative; z-index: 0;}
+         .footer__map {display: block; width: 100%; margin-top: 20px;}
+         /* fixed content */
+         .slide {position: fixed; z-index: 0; top: 40px;}
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <div class="slide">
+            <a href="#down"><img src="zobacz.jpg" /></a>
+         </div>
+         <div class="header">
+            <!-- #logo# -->
+            <img src="zdj.png" class="logo" style="margin-left: 0px; position: relative; top: 5px; margin-bottom: 130px; -webkit-filter: drop-shadow(0px 0px 10px red); filter: drop-shadow(0px 0px 10px red);" />
+            <!-- #logo# -->
+            <!-- #kontakt# -->
+            <a href="https://goo.gl/maps/EVXTvuZ5GQM2" target="_blank"><img src="map.png" id="map" style="display: none; position: relative; float: right; top: 45px; right: 200px; width: 280px;" /></a>
+            <!-- #kontakt# -->
+            <!-- #social# -->
+            <a href="https://www.facebook.com/Hardtopcompl-1131304456936510/" target="_blank"><img src="fb.png" class="social" style="position: relative; float: right; right: -7px; width: 130px;" /></a>
+            <a href="https://www.instagram.com/hardtop.com.pl/" target="_blank"><img src="instagram.png" class="social" style="position: relative; float: right; right: -137px; top: 60px; width: 130px;" /></a>
+            <!-- #social# -->
+            <!-- #menu# -->
+            <div class="menu">
+               <ul>
+                  <li><a href="dd"><img src="onas.jpg" style="margin-right: -50px !important;"></a></li>
+                  <li><a href="ss"><img src="aukcje.jpg" style="margin-right: -6px !important;"></a></li>
+                  <li><a href="ff"><img src="komentarze.jpg" style="margin-right: -6px !important;"></a></li>
+                  <li><a href="aa"><img src="kontakt.jpg"></a></li>
+               </ul>
+            </div>
+            <!-- #menu# -->
+         </div>
+         <!-- #left panel# -->
+         <div class="left__panel">
+            <img src="oferta.jpg" />
+            <div class="left__panel-menu">
+               <ul>
+                  <li><a href="asasas">Ford</a></li>
+                  <li><a href="asasas">Isuzu</a></li>
+                  <li><a href="asasas">Volkswagen</a></li>
+                  <li><a href="asasas">Mitsubishi</a></li>
+                  <li><a href="asasas">Nissan</a></li>
+                  <li><a href="asasas">Toyota</a></li>
+               </ul>
+            </div>
+         </div>
+         <!-- #right panel# -->
+         <div class="right__panel">
+            <img src="kategorie.jpg" />
+            <div class="right__panel-menu">
+               <ul>
+                  <li><a href="asasas">Zabudowy</a></li>
+                  <li><a href="asasas">Kuwety</a></li>
+                  <li><a href="asasas">Progi</a></li>
+                  <li><a href="asasas">Orurowania</a></li>
+                  <li><a href="asasas">Osłony podwozia</a></li>
+                  <li><a href="asasas">Oświetlenie</a></li>
+                  <li><a href="asasas">Felgi</a></li>
+                  <li><a href="asasas">Opony</a></li>
+                  <li><a href="asasas">Zderzaki</a></li>
+                  <li><a href="asasas">Box</a></li>
+               </ul>
+            </div>
+         </div>
+         <!-- #content# -->
+         <div class="title">
+            <b>
+               <h4 style="text-align: center;">
+               Przedmiotem aukcji jest:</h2>
+            </b>
+            <br />
+            <h1>Kierownica CLASSIC x5 20, asasasas, laslaslas, dfdsfdsdsfds, sadasdasddsad, sdf</h1>
+         </div>
+         <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae sagittis neque, nec pharetra tellus. Nunc sodales elit leo, eu iaculis metus aliquam sed. Sed vestibulum lorem a nunc sollicitudin venenatis non quis lorem. Mauris vitae turpis id dui vehicula rhoncus dignissim et justo. Phasellus sagittis, ipsum ut posuere sodales, velit diam pulvinar enim, ac tempor tellus ipsum at lectus. Donec fermentum efficitur augue, vel interdum felis finibus eu. Fusce dictum lorem a dui lobortis fermentum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras eget pharetra velit. Praesent finibus dui at dui tristique, eu sodales nulla suscipit. Mauris eleifend pretium molestie.
+            vitae placerat vel, gravida vel mi. Maecenas a lacus libero. Praesent venenatis, quam lacinia pharetra tristique, turpis purus lacinia lorem, ac gravida nunc magna a augue. Sed at mollis lectus, eget finibus ante. Donec varius, lacus a dictum porta, nibh mauris faucibus ipsum, et accumsan nisi arcu eu augue. Proin quis sem eu ligula imperdiet luctus. Etiam viverra vehicula molestie. Proin et gravida mauris, in fermentum purus. Aliquam a nulla congue, maximus tortor placerat, fringilla leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed lorem nulla, malesuada ut malesuada a, fermentum sed diam. 
+         </div>
+         <!-- #tutaj wrzucamy zdjecia# -->
+         <div class="images">
+            <b>
+               <h4 style="text-align: center; padding: 20px;">
+               Zdjęcia (kliknij, aby powiększyć):</h2>
+            </b>
+            <br />
+            <img src="zdj1.jpg" />
+            <img src="zdj1.jpg" />
+            <img src="zdj2.jpg" />
+            <img src="zdj1.jpg" />
+         </div>
+         <div class="footer">
+            <!-- Aukcjoner.pl PANEL START -->
+            <br clear="all">
+            <center>
+               <table id="aukcjoner263398" cellspacing="0" style="font:10px Verdana; margin:10px auto; border-collapse:separate; border-spacing:0">
+                  <tr>
+                     <td colspan="4" class="au_header au_tab_top" style="background:transparent; color:#000000">
+                        <div style="position:relative; height:24px; text-align:left"><span style="line-height:24px; font-size:14px; font-weight: bold; margin-left:5px; padding:0 10px 0; background:transparent; color:#000000"></span></div>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="au_img au_left au_top"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,1/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/1-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/1.jpg"></a></td>
+                     <td class="au_img au_top"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,2/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/2-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/2.jpg"></a></td>
+                     <td class="au_img au_top"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,3/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/3-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/3.jpg"></a></td>
+                     <td class="au_img au_right au_top"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,4/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/4-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/4.jpg"></a></td>
+                  </tr>
+                  <tr>
+                     <td class="au_img au_left au_bottom"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,5/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/5-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/5.jpg"></a></td>
+                     <td class="au_img au_bottom"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,6/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/6-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/6.jpg"></a></td>
+                     <td class="au_img au_bottom"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,7/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/7-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/7.jpg"></a></td>
+                     <td class="au_img au_right au_bottom"><a rel="nofollow" href="http://www.aukcjoner.pl/panele/click/263398,8/" target="_blank"><img class="au_cur" src="http://panel.aukcjoner.pl/Panel/img/263398/8-over.png"><img class="au_auc" src="http://panel.aukcjoner.pl/Panel/img/263398/8.jpg"></a></td>
+                  </tr>
+                  <tr>
+                     <td colspan="4" class="au_tab_bottom au_footer" style="background:transparent; color:#000000"></td>
+                  </tr>
+               </table>
+            </center>
+            <style>#aukcjoner263398 td.au_top {border-top:1px solid transparent}
+               #aukcjoner263398 td.au_left {border-left:1px solid transparent}
+               #aukcjoner263398 td.au_right {border-right:1px solid transparent}
+               #aukcjoner263398 td.au_bottom {border-bottom:1px solid transparent}
+               #aukcjoner263398 .au_tab_top {border:1px solid #888888; border-width: 1px 1px 0 1px}
+               #aukcjoner263398 .au_header {padding:0 10px; vertical-align:bottom; border-color:transparent}
+               #aukcjoner263398 .au_link {background:#ffffff; color:#000000; padding:1px 10px 1px; margin:0 10px 0 0; display:block; float:right; text-align:center; text-decoration:none}
+               #aukcjoner263398 .au_link:hover {text-decoration:underline}
+               #aukcjoner263398 .au_tab_bottom {padding:0 10px 2px; margin:0 5px; vertical-align:top; border:1px solid #888888; border-width: 0 1px 1px 1px}
+               #aukcjoner263398 .au_footer {padding:0 10px; height:24px; border-color:transparent}
+               #aukcjoner263398 .au_img {font-size:0; vertical-align:top; border-width:0; background:transparent; padding:6px; border-right:1px solid transparent; border-bottom:1px solid transparent}
+               #aukcjoner263398 td.au_top {border-top:1px solid transparent}
+               #aukcjoner263398 td.au_left {border-left:1px solid transparent}
+               #aukcjoner263398 img.au_auc {width:167px; height:214px; background:white url(http://www.aukcjoner.pl/Panel/gfx/loader.gif) no-repeat 50% 50%; border-width:0px}
+               #aukcjoner263398 .au_img a {position:relative; display:block; width:167px; height:214px}
+               #aukcjoner263398 a img.au_cur {border:none; position:absolute; visibility:hidden; background:none}
+               #aukcjoner263398 a:hover img.au_cur {visibility:visible}
+            </style>
+            <!-- Aukcjoner.pl PANEL KONIEC -->
+         </div>
+         <div class="footer__map" id="down">
+            <img src="mapa.png" />
+         </div>
+      </div>
+   </body>
 </html>
+
